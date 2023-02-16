@@ -12,6 +12,9 @@
   --team-background-color: #f4f4fd;
   --team-card-background-color: #ffffff;
   --footer-color: #2e2f42;
+  --thumb-color: #f4f4fd;
+  --color-background-social-link: #4d5ae5;
+  --hover-footer-socials-link: #31d0aa;
 }
 body {
   color: var(--text-color);
@@ -66,7 +69,6 @@ img {
 .container-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
 }
 .nav-container {
   display: flex;
@@ -142,9 +144,19 @@ img {
 }
 /* preview */
 .preview {
-  background-color: #2e2f42;
   text-align: center;
   padding: 188px 0;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("./img/people-office.jpg");
+
+  background-repeat: no-repeat;
+  background-size: 1440px;
+  background-position: center;
 }
 .preview-header {
   color: var(--primery-background-color);
@@ -209,6 +221,16 @@ img {
 .advantages-list + .advantages-list {
   margin-left: 24px;
 }
+.thumb {
+  background-color: var(--thumb-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.icon-list {
+  padding: 24px 100px 24px 100px;
+  width: 264px;
+  height: 112px;
+}
 
 /* works */
 .works {
@@ -237,6 +259,7 @@ img {
 
 .team {
   background-color: var(--team-background-color);
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 .team-card {
@@ -261,7 +284,7 @@ img {
   margin-left: 24px;
 }
 .card-text {
-  padding: 32px 16px;
+  padding: 32px 16px 0px 16px;
 }
 
 .team-name {
@@ -286,7 +309,76 @@ img {
 .team-specialization {
   color: var(--text-color);
 }
+
+/* SN-list */
+.social-list {
+  display: flex;
+  gap: 24px;
+  padding: 8px 16px 32px 16px;
+}
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background-social-link);
+  border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #404bbf;
+}
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* customers */
+.customers {
+  padding: 130px 0 120px 0;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+.customers-item {
+  width: 168px;
+  height: 88px;
+}
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid #404bbf;
+  border-radius: 4px;
+}
+
+.customers-link:hover .customers-icon {
+  fill: #404bbf;
+}
+
+.customers-icon {
+  width: 104px;
+  height: 56px;
+  fill: #8e8f99;
+}
 /* footer */
+.footer-container {
+  display: flex;
+}
 .bottom-line {
   background-color: var(--footer-color);
   padding: 100px 0;
@@ -321,6 +413,45 @@ img {
   letter-spacing: 0.02em;
   width: 264px;
 }
+.social-list-conteiner {
+  margin-left: 120px;
+}
+.footer-social-header {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--hover-footer-socials-link);
+}
+.footer-social-icon {
+  width: 24px;
+  height: 24px;
+}
+
 /* portfolio */
 .work-examples {
   padding-top: 96px;
@@ -389,4 +520,12 @@ img {
   border-right: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
+}
+.examples-link:hover .examples-card-text,
+.examples-link:focus .examples-card-text {
+  border-right: 0.5px solid #f4f4fd;
+  border-left: 0.5px solid #f4f4fd;
+  border-bottom: 0.5px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
