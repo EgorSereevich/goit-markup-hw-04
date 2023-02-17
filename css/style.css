@@ -155,8 +155,10 @@ img {
     url("./img/people-office.jpg");
 
   background-repeat: no-repeat;
-  background-size: 1440px;
   background-position: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-size: cover;
 }
 .preview-header {
   color: var(--primery-background-color);
@@ -184,6 +186,7 @@ img {
   height: 56px;
   border-radius: 4px;
   border: 1px solid var(--primery-button-background-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .peview-button:hover,
 .peview-button:focus {
@@ -225,11 +228,15 @@ img {
   background-color: var(--thumb-color);
   border-radius: 4px;
   margin-bottom: 8px;
-}
-.icon-list {
-  padding: 24px 100px 24px 100px;
   width: 264px;
   height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-list {
+  width: 64px;
+  height: 64px;
 }
 
 /* works */
@@ -284,7 +291,7 @@ img {
   margin-left: 24px;
 }
 .card-text {
-  padding: 32px 16px 0px 16px;
+  padding: 32px 16px 32px 16px;
 }
 
 .team-name {
@@ -312,9 +319,9 @@ img {
 
 /* SN-list */
 .social-list {
+  margin-top: 8px;
   display: flex;
   gap: 24px;
-  padding: 8px 16px 32px 16px;
 }
 .social-item {
   width: 40px;
@@ -360,13 +367,17 @@ img {
   border: 1px solid #8e8f99;
   border-radius: 4px;
 }
-.customers-link:hover,
+.customers-link:hover {
+  border: 1px solid #404bbf;
+  border-radius: 4px;
+}
 .customers-link:focus {
   border: 1px solid #404bbf;
   border-radius: 4px;
 }
 
-.customers-link:hover .customers-icon {
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
   fill: #404bbf;
 }
 
@@ -525,9 +536,6 @@ img {
 }
 .examples-link:hover .examples-card-text,
 .examples-link:focus .examples-card-text {
-  border-right: 0.5px solid #f4f4fd;
-  border-left: 0.5px solid #f4f4fd;
-  border-bottom: 0.5px solid #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
